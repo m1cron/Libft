@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
-project(lab_3_4_signals)
+project(libft.a)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O2 -m64 -Wno-deprecated-register")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c99 -O2 -m64")
 
-file(GLOB CPP "*.cpp" C "*.c")
+file(GLOB C "*.c")
 
-add_executable(${PROJECT_NAME} ${CPP} ${C})
+add_executable(${PROJECT_NAME} ${C})
