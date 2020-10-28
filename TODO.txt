@@ -1,9 +1,4 @@
-• strlcpy
-• strlcat
-• strchr
 • strrchr
 • strnstr
 • strncmp
 • atoi
-
-• tolower

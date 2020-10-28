@@ -4,13 +4,16 @@
 
 #include "libft.h"
 
-void    *ft_memccpy(void *dest, const void *src, int c, size_t n) //TODO
+void    *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-    void    *ptr;
+    size_t  i;
 
-    ptr = ft_memchr(src, c, n);
-    if (ptr != NULL)
-        return (ft_memcpy(dest, src, ptr - src + 1));
-    //memcpy(dest, src, n);
+    i = 0;
+    while (n--)
+    {
+        if ((((unsigned char*)dest)[i] = *(unsigned char*)src++) == (unsigned char)c)
+            return (dest + i + 1);
+        i++;
+    }
     return (NULL);
 }
