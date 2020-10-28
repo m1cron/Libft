@@ -1,4 +1,3 @@
-• memcmp
 • strlen
 • strlcpy
 • strlcat
