@@ -1,4 +1,3 @@
-• strlen
 • strlcpy
 • strlcat
 • strchr
