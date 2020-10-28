@@ -4,7 +4,7 @@
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+int		ft_isprint(int c)
 {
-    return (c >= 0 && c <= 127) ? 1 : 0;
+    return (c > 31 && c < 127) ? 1 : 0;
 }
