@@ -23,6 +23,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 int     ft_isdigit(int c);
 int	    ft_isalnum(int c);
+int	    ft_isascii(int c);
+
 
 
 

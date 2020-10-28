@@ -7,8 +7,6 @@
 • atoi
 • isalpha
 
-
-• isascii
 • isprint
 • toupper
 • tolower
