@@ -1,0 +1,17 @@
+• memmove
+• memcmp
+• strlen
+• strlcpy
+• strlcat
+• strchr
+• strrchr
+• strnstr
+• strncmp
+• atoi
+• isalpha
+• isdigit
+• isalnum
+• isascii
+• isprint
+• toupper
+• tolower
