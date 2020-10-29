@@ -9,7 +9,7 @@ char    *ft_strdup(const char *s)
     size_t len;
     void *tmp;
 
-    return ((tmp = malloc((len = ft_strlen(s)) + 1))) ?
+    return (((tmp = malloc((len = ft_strlen(s)) + 1))) ?
             (ft_memcpy(tmp, s, len)) :
-            (NULL);
+            (NULL));
 }

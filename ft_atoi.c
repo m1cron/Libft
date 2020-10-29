@@ -11,7 +11,7 @@ static char ft_isspace(char c)
 
 int     ft_atoi(const char *nptr)
 {
-    unsigned res;
+    register unsigned res;
     char sign;
 
     while (ft_isspace(*nptr))

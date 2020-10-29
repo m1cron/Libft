@@ -1,8 +1,8 @@
 #include "libft.h"
 
-size_t  ft_strlen(const char *s)
+size_t  ft_strlen(register const char *s)
 {
-    const char *tmp;
+    register const char *tmp;
 
     if (!s)
         return (0);
