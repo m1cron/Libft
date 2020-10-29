@@ -1,6 +1,1 @@
-• strrchr
-• strnstr
-• strncmp
 • atoi
-
-• strdup
