@@ -20,7 +20,6 @@ void    *ft_memmove(void *dest, const void *src, size_t n);
 void    *ft_memchr(const void *s, int c, size_t n);
 int     ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t  ft_strlen(register const char *s);
-char    *ft_strncpy(char *dest, const char *src, size_t n);
 size_t  ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t  ft_strlcat(char *dst, const char *src, size_t size);
@@ -61,5 +60,15 @@ void    ft_lstdelone(t_list *lst, void (*del)(void *));
 void    ft_lstclear(t_list **lst, void (*del)(void *));
 void    ft_lstiter(t_list *lst, void (*f)(void *));
 t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/*    my func   */
+int     ft_isspace(char c);
+void    ft_putchar(char c);
+void	ft_putstr(char const *s);
+void	ft_putnbr(int n);
+int     ft_strcmp(const char *s1, const char *s2);
+char    *ft_strncpy(char *dest, const char *src, size_t n);
+
+
 
 #endif

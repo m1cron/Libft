@@ -4,11 +4,6 @@
 
 #include "libft.h"
 
-static char ft_isspace(char c)
-{
-    return ((char)(c == 9 || c == 10 || c == 11 || c == 12 || c == 13 || c == 32));
-}
-
 int     ft_atoi(const char *nptr)
 {
     register unsigned res;
