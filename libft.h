@@ -64,7 +64,7 @@ t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 /*    my func   */
 int     ft_isspace(char c);
 void    ft_putchar(char c);
-void	ft_putstr(char const *s);
+void	ft_putstr(char *s);
 void	ft_putnbr(int n);
 int     ft_strcmp(const char *s1, const char *s2);
 char    *ft_strncpy(char *dest, const char *src, size_t n);
