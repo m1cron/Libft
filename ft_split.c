@@ -6,7 +6,7 @@
 /*   By: csibyl <csibyl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 14:42:49 by csibyl            #+#    #+#             */
-/*   Updated: 2020/10/30 19:21:53 by csibyl           ###   ########.fr       */
+/*   Updated: 2020/10/30 20:26:50 by csibyl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,11 @@ static size_t			ws_count(char const *s, char c)
 	return (count);
 }
 
-static void				*leak_fix(char **strings, int count)
+static void				leak_fix(char **strings, int count)
 {
 	while (count--)
 		free(strings[count]);
 	free(strings);
-	return (NULL);
 }
 
 static size_t			wlen(char const *s, char c)
@@ -52,18 +51,13 @@ static size_t			wlen(char const *s, char c)
 	return (len);
 }
 
-char					**ft_split(char	const *s, char c)
+void					do_split(char	const *s, char c, char **split,
+													size_t words_count)
 {
-	char				**split;
-	size_t				words_count;
-	size_t				word_len;
-	size_t				i;
-	size_t				j;
+	size_t word_len;
+	size_t i;
+	size_t j;
 
-	if (!s || !(words_count = ws_count(s, c)))
-		return (NULL);
-	if (!(split = (char **)malloc(sizeof(char *) * (words_count + 1))))
-		return (NULL);
 	i = 0;
 	while (i < words_count)
 	{
@@ -78,5 +72,18 @@ char					**ft_split(char	const *s, char c)
 		split[i++][j] = '\0';
 	}
 	split[i] = NULL;
+}
+
+char					**ft_split(char	const *s, char c)
+{
+	char				**split;
+	size_t				words_count;
+
+	if (!s)
+		return (NULL);
+	words_count = ws_count(s, c);
+	if (!(split = (char **)malloc(sizeof(char *) * (words_count + 1))))
+		return (NULL);
+	do_split(s, c, split, words_count);
 	return (split);
 }
