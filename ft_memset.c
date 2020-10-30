@@ -6,8 +6,8 @@
 
 void    *ft_memset(void *s, int c, size_t n)
 {
-    unsigned char *dest;
-    unsigned char ch;
+    register unsigned char *dest;
+    register unsigned char ch;
 
     dest = (unsigned char *)s;
     ch = (unsigned char)c;

@@ -6,7 +6,7 @@
 
 static int		ft_digit_len(int n)
 {
-    int len;
+    register int len;
 
     len = 1;
     while ((n /= 10))
@@ -15,10 +15,10 @@ static int		ft_digit_len(int n)
 }
 
 char			*ft_itoa(int n) {
-    char *itoa;
+    register char *itoa;
+    register int len;
+    register int digit;
     char minus;
-    int len;
-    int digit;
 
     minus = (n < 0) ? 1 : 0;
     if (!(itoa = (char *) malloc((len = ft_digit_len(n) + minus))))

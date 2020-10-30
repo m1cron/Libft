@@ -6,8 +6,8 @@
 
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char *foreach;
-    unsigned int i;
+    register char *foreach;
+    register unsigned int i;
 
     if (s && f && (foreach = (char *) malloc(ft_strlen(s))))
     {

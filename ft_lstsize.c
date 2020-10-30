@@ -6,7 +6,7 @@
 
 int     ft_lstsize(t_list *lst)
 {
-    int size;
+    register int size;
     t_list *tmp;
 
     size = 0;

@@ -6,7 +6,7 @@
 
 char    *ft_strdup(const char *s)
 {
-    size_t len;
+    register size_t len;
     void *tmp;
 
     return (((tmp = malloc((len = ft_strlen(s)) + 1))) ?

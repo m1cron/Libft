@@ -6,7 +6,7 @@
 
 static size_t   ws_count(char const *s, char c)
 {
-    size_t count;
+    register size_t count;
 
     count = 0;
     while (*s)
@@ -33,7 +33,7 @@ static void     *leakFix(char **strings, int count)
 
 static size_t   wlen(char const *s, char c)
 {
-    size_t len;
+    register size_t len;
 
     len = 0;
     while (*s && *s != c)

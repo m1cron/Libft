@@ -6,7 +6,7 @@
 
 char    *ft_strrchr(const char *s, int c)
 {
-    size_t i;
+    register size_t i;
 
     i = ft_strlen(s);
     if ((char)c == '\0')
