@@ -31,7 +31,7 @@ char			*ft_itoa(int n)
 
 	minus = (n < 0) ? 1 : 0;
 	len = ft_digit_len(n) + minus;
-	if (!(itoa = (char *)malloc(len)))
+	if (!(itoa = (char *)malloc(len + 1)))
 		return (NULL);
 	*(itoa + len--) = '\0';
 	while (len >= minus)
@@ -42,5 +42,6 @@ char			*ft_itoa(int n)
 	}
 	if (minus)
 		*itoa = '-';
+	itoa[len - 1] = '\0';
 	return (itoa);
 }

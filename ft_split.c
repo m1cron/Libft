@@ -6,7 +6,7 @@
 /*   By: csibyl <csibyl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 14:42:49 by csibyl            #+#    #+#             */
-/*   Updated: 2020/10/30 14:53:08 by csibyl           ###   ########.fr       */
+/*   Updated: 2020/10/30 19:21:53 by csibyl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,9 @@ char					**ft_split(char	const *s, char c)
 	size_t				i;
 	size_t				j;
 
-	words_count = ws_count(s, c);
-	if (!s || !(split = (char **)malloc(sizeof(char *) * (words_count + 1))))
+	if (!s || !(words_count = ws_count(s, c)))
+		return (NULL);
+	if (!(split = (char **)malloc(sizeof(char *) * (words_count + 1))))
 		return (NULL);
 	i = 0;
 	while (i < words_count)
