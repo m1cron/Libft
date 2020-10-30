@@ -1,14 +1,22 @@
-//
-// Created by micron on 10/29/2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csibyl <csibyl@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/30 14:00:48 by csibyl            #+#    #+#             */
+/*   Updated: 2020/10/30 14:01:08 by csibyl           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    while ((*s) && (*s) != c)
-        s++;
-    if ((*s) == c)
-        return ((char *)s);
-    return (NULL);
+	while ((*s) && (*s) != c)
+		s++;
+	if ((*s) == c)
+		return ((char *)s);
+	return (NULL);
 }

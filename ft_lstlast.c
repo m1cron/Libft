@@ -1,15 +1,23 @@
-//
-// Created by micron on 10/29/2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csibyl <csibyl@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/30 13:26:29 by csibyl            #+#    #+#             */
+/*   Updated: 2020/10/30 13:27:19 by csibyl           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-t_list  *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    t_list *tmp;
+	t_list	*tmp;
 
-    tmp = lst;
-    while (tmp->next)
-        tmp = tmp->next;
-    return (tmp);
+	tmp = lst;
+	while (tmp->next)
+		tmp = tmp->next;
+	return (tmp);
 }

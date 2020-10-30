@@ -1,14 +1,20 @@
-//
-// Created by micron on 10/29/2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csibyl <csibyl@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/30 13:57:01 by csibyl            #+#    #+#             */
+/*   Updated: 2020/10/30 13:57:19 by csibyl           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    if (s)
-        write(fd, s, ft_strlen(s));
-    write(fd, "\n", 1);
+	if (s)
+		write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }

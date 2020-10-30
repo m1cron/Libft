@@ -1,19 +1,26 @@
-//
-// Created by micron on 28.10.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csibyl <csibyl@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/30 13:36:14 by csibyl            #+#    #+#             */
+/*   Updated: 2020/10/30 13:49:41 by csibyl           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-    register size_t  i;
+	register unsigned const char	*s;
+	register unsigned char			*d;
 
-    i = 0;
-    while (n--)
-    {
-        if ((((unsigned char*)dest)[i] = *(unsigned char*)src++) == (unsigned char)c)
-            return (dest + i + 1);
-        i++;
-    }
-    return (NULL);
+	s = src;
+	d = dest;
+	while (n--)
+		if ((*d++ = *s++) == (unsigned char)c)
+			return (d);
+	return (NULL);
 }

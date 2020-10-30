@@ -1,15 +1,23 @@
-//
-// Created by micron on 10/29/2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csibyl <csibyl@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/30 13:22:48 by csibyl            #+#    #+#             */
+/*   Updated: 2020/10/30 13:23:18 by csibyl           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (lst)
-    {
-        if (new)
-            new->next = *lst;
-        *lst = new;
-    }
+	if (lst)
+	{
+		if (new)
+			new->next = *lst;
+		*lst = new;
+	}
 }

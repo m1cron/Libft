@@ -1,15 +1,24 @@
-//
-// Created by micron on 10/29/2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csibyl <csibyl@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/30 14:04:35 by csibyl            #+#    #+#             */
+/*   Updated: 2020/10/30 14:06:17 by csibyl           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    register size_t len;
-    void *tmp;
+	register size_t	len;
+	void			*tmp;
 
-    return (((tmp = malloc((len = ft_strlen(s)) + 1))) ?
-            (ft_memcpy(tmp, s, len)) :
-            (NULL));
+	len = ft_strlen(s);
+	return (((tmp = malloc(len + 1))) ?
+				(ft_memcpy(tmp, s, len)) :
+					(NULL));
 }
