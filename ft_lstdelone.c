@@ -6,7 +6,7 @@
 /*   By: csibyl <csibyl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 13:25:03 by csibyl            #+#    #+#             */
-/*   Updated: 2020/10/30 13:25:24 by csibyl           ###   ########.fr       */
+/*   Updated: 2020/10/31 17:58:56 by csibyl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst && del)
 	{
-        (*del)(lst->content);
+		(*del)(lst->content);
 		free(lst);
 		lst = NULL;
 	}

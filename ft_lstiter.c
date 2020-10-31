@@ -6,7 +6,7 @@
 /*   By: csibyl <csibyl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 13:25:43 by csibyl            #+#    #+#             */
-/*   Updated: 2020/10/30 13:26:06 by csibyl           ###   ########.fr       */
+/*   Updated: 2020/10/31 17:58:32 by csibyl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    t_list *current;
+	t_list *current;
 
 	if (!f)
 		return ;
-    current = lst;
+	current = lst;
 	while (current)
 	{
 		f(current->content);
-        current = current->next;
+		current = current->next;
 	}
 }
